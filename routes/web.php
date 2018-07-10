@@ -33,25 +33,18 @@ Route::prefix('admin')->group(function(){
   Route::get('/pengumuman', 'AdminController@pengumuman')->name('pengumuman');
   Route::get('/pengumuman-dipost', 'AdminController@pengumumanPost')->name('pengumuman-dipost');
   Route::delete('/{id}/pengumuman-dipost', 'AdminController@hapusPengumuman')->name('hapus.pengumuman');//untuk hapus pengumuman
-  // Route::get('/pengumuman', 'AdminController@pengumumanPost')->name('pengumumanPost');
   Route::post('/pengumuman', 'AdminController@buatPengumuman')->name('buatPengumuman.view');
   Route::get('/', 'AdminController@index')->name('admin.dashboard');
 
  });
 
 Route::prefix('user')->group(function(){
-    // Route::get('/', 'UserController@view')->name('buat-laporan.view');
    Route::get('/kontak', 'UserController@kontak')->name('kontak.view');
    Route::get('/pelayanan', 'UserController@pelayanan')->name('pelayanan.view');
    Route::get('/tupoksi', 'UserController@tupoksi')->name('tupoksi.view');
    Route::get('/buatLaporan', 'UserController@view')->name('laporan.view');
    Route::post('/buatLaporan', 'UserController@buatLaporan')->name('buatLaporan.view');
    Route::get('/laporan-saya', 'UserController@laporanSaya')->name('laporan-saya.view');
-   // Route::post('/buat-laporan', 'UserController@buatLaporan')->name('buatLaporan.view');
    Route::get('/profil', 'UserController@profil')->name('profil.view');
    Route::get('/register', 'UserController@register')->name('register.view');
 });
-
-// Route::prefix('laporan')->group(function(){
-// 	Route::get('/kontak', 'UserController@kontak')->name('kontak.view');
-// });
