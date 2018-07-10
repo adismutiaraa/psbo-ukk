@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.atas')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header"><h1>{{ __('Login') }}</h1></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -41,13 +41,16 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
+                                <div class="checkbox"><label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
+                        <p>Belemu punya akun? <a class="" href="{{ route('register.view') }}">
+                                    {{ __('Buat di sini') }}</a></p>
+                        <p></p>
+                        <p></p>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
@@ -55,7 +58,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>

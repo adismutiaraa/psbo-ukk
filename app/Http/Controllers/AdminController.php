@@ -50,7 +50,7 @@ class AdminController extends Controller
             'judul'         => request('judul'),
             'pengumuman'    => request('pengumuman'),
           ]);
-        return redirect('/admin/laporan-masuk');
+        return redirect('/admin/pengumuman-dipost');
     }
 
     public function hapusPengumuman($id)

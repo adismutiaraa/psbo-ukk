@@ -50,7 +50,11 @@ class UserController extends Controller
             'laporan'      => request('laporan'),
             'id-user'      => auth()->id(),
             ]);
-        return redirect('/user/kontak');
+        return redirect('/user/laporan-saya');
+    }
+
+    public function register (){
+         return view('auth.register');
     }
 }
 

@@ -1,46 +1,13 @@
-<!DOCTYPE html>
-<!--
-Template Name: Geodarn
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
-<html>
+@extends('layouts.atas')
 @include('layouts.part._head')
-<body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/coin.jpg');"> 
-  <!-- ################################################################################################ -->
- @include('layouts.part._tabs')
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row2">
-    </div>
-    <div id="breadcrumb" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-	  <ul>
-        <li><a href="#">Informasi</a></li>
-        <li><a href="#">Buat Laporan </a></li>
-      </ul>
-      <!-- ################################################################################################ -->
-    </div>
-  <!-- ################################################################################################ -->
-</div>
-<!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+@section('content')
+
 @guest
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header"><h1>{{ __('Login') }}</h1></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -76,13 +43,16 @@ Licence URI: http://www.os-templates.com/template-terms
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
+                                <div class="checkbox"><label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
+                        <p>Belemu punya akun? <a class="" href="{{ route('register.view') }}">
+                                    {{ __('Buat di sini') }}</a></p>
+                        <p></p>
+                        <p></p>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
@@ -90,7 +60,7 @@ Licence URI: http://www.os-templates.com/template-terms
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>
@@ -150,7 +120,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-@include('layouts.part._footer')
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -160,6 +130,5 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-@include('layouts.part._script')
-</body>
-</html>
+
+@endsection

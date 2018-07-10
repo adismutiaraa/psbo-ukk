@@ -16,7 +16,7 @@
 // });
 
 Auth::routes();
-Route::get('/', 'HomeController@index')->name('beranda.view');
+Route::get('/', 'HomeController@index')->name('welcome');
 //Route::get('/home', 'HomeController@index');//->name('home');
 
 Route::prefix('admin')->group(function(){
@@ -49,6 +49,7 @@ Route::prefix('user')->group(function(){
    Route::get('/laporan-saya', 'UserController@laporanSaya')->name('laporan-saya.view');
    // Route::post('/buat-laporan', 'UserController@buatLaporan')->name('buatLaporan.view');
    Route::get('/profil', 'UserController@profil')->name('profil.view');
+   Route::get('/register', 'UserController@register')->name('register.view');
 });
 
 // Route::prefix('laporan')->group(function(){

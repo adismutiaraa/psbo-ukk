@@ -9,10 +9,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <html>
 @include('layouts.part._head')
 <body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- Top Background Image Wrapper -->
+
 <div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/coin.jpg');"> 
   <!-- ################################################################################################ -->
  @include('layouts.part._tabs')
@@ -25,7 +22,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <!-- ################################################################################################ -->
     <ul>
         <li><a href="#">Informasi</a></li>
-        <li><a href="#">Buat Laporan </a></li>
+        <li><a href="#">Laporan Saya </a></li>
       </ul>
       <!-- ################################################################################################ -->
     </div>
@@ -36,54 +33,53 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 
-<div class="content mt-3">
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+<!-- <div class="content mt-3"> -->
             <div class="animated fadeIn">
                 <div class="row">
 
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Data Table Laporan Masuk</strong>
+                            <strong class="card-title">Laporan Saya</strong>
                         </div>
                         <div class="card-body">
-                  <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                    <thead>
-                      <tr>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Laporan</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    @foreach($laporan as $laporan)
-                    <tbody>
-                      <tr>
-                        <td>{{$laporan->name}}</td>
-                        <td>{{$laporan->email}}</td>
-                        <td>{{$laporan->laporan}}</td>
-                        <td>
-                        <?php
-                          if( $laporan->status==1 )
-                            print "Laporan Sudah Dikonfirmasi";
-                          else
-                            print "Laporan Terkirim";
-                        ?>
-
-                        </td>
+                          <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                          <thead>
+                          <tr>
+                          <th>Nama</th>
+                          <th>Email</th>
+                          <th>Laporan</th>
+                          <th>Status</th>
+                          </tr>
+                          </thead>
+                          @foreach($laporan as $laporan)
+                          <tbody>
+                            <tr>
+                              <td>{{$laporan->name}}</td>
+                              <td>{{$laporan->email}}</td>
+                              <td>{{$laporan->laporan}}</td>
+                              <td>
+                              <?php
+                                if( $laporan->status==1 )
+                                  print "Laporan Sudah Dikonfirmasi";
+                                else
+                                  print "Laporan Terkirim";
+                              ?>
+                              </td>
                         
-                      </tr>
-                      @endforeach
-                    </tbody>
-                  </table>
+                             </tr>
+                          @endforeach
+                          </tbody>
+                          </table>
                         </div>
                     </div>
                 </div>
-                
-
-
                 </div>
             </div><!-- .animated -->
-        </div><!-- .content -->
+  </main>
+</div><!-- .content -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->

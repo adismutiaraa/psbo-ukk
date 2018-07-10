@@ -1,12 +1,13 @@
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/coin.jpg');"> 
 <div class="wrapper row1">
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
-        <h1><a href="{{route('beranda.view')}}">Unit Keamanan Kampus</a></h1>
+        <h1><a href="{{route('welcome')}}">Unit Keamanan Kampus</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li class="active"><a href="{{route('beranda.view')}}">Beranda</a></li>
+          <li class="active"><a href="{{route('welcome')}}">Beranda</a></li>
           <li><a class="drop" href="#">Informasi</a>
             <ul>
               <li><a href="{{route('laporan.view')}}">Buat Laporan</a></li>
@@ -37,3 +38,4 @@
       <!-- ################################################################################################ -->
     </header>
   </div>
+</div>

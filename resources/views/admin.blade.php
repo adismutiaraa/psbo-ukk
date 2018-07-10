@@ -60,10 +60,10 @@
                     </li>
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Pengumuman</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-thumb-tack"></i>Pengumuman</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-file"></i><a href="{{route('pengumuman')}}">Buat Pengmuman</a></li>
-                            <li><i class="fa fa-file"></i><a href="{{route('pengumuman-dipost')}}">Postingan Pengumuman</a></li>
+                            <li><i class="fa fa-thumb-tack"></i><a href="{{route('pengumuman')}}">Buat Pengmuman</a></li>
+                            <li><i class="fa fa-thumb-tack"></i><a href="{{route('pengumuman-dipost')}}">Postingan Pengumuman</a></li>
                             
                         </ul>
                     </li>
